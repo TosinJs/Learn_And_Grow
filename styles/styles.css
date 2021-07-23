@@ -1,5 +1,96 @@
 * {
   margin: 0;
   padding: 0;
+  border: 0;
+}
+
+.container {
+  width: 80%;
+  padding: 10% 10%;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+}
+
+header h3 {
+  font-size: 34px;
+  line-height: 50px;
+  font-weight: 700;
+}
+
+header h4 {
+  font-size: 20px;
+  line-height: 27px;
+}
+
+header p {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.card-holder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 60px 25px;
+}
+
+@media screen and (min-width: 600px) {
+  .card-holder {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card-holder .card:nth-child(even) {
+  top: 50px;
+  background: red;
+}
+
+@media screen and (min-width: 600px) {
+  .card-holder .card:nth-child(5) {
+    top: 100px;
+    background-color: blue;
+  }
+}
+
+.card {
+  position: relative;
+  border: 1px solid red;
+}
+
+.card img {
+  width: 90%;
+  height: 250px;
+}
+
+.card .card-name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.card .card-title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 13.25px;
+  border: 1px solid black;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 10%;
+  top: 0;
+  right: 0;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
 }
 /*# sourceMappingURL=styles.css.map */
