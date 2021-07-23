@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://tosinjs.github.io/Learn_And_Grow/">
+    <a href="https://tosinjs.github.io/Learn_And_Grow/404-not-found/">
       Demo
     </a>
     <span> | </span>
@@ -37,7 +37,7 @@
 ![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
 
 - Where can I see your demo?
-  https://tosinjs.github.io/Learn_And_Grow/
+  https://tosinjs.github.io/Learn_And_Grow/404-not-found/
 
 ### Built With
 
