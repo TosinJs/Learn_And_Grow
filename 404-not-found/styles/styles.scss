@@ -1,0 +1,105 @@
+//Resetting Everything to default styles
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+//Declaring Necessary Variables
+$primary-color: #333333;
+$secondary-color: #4f4f4f;
+$primary-font: "Space Mono", monospace;
+$secondary-font: "Inconsolata", monospace;
+
+//Mixins
+@mixin mobile($width: 975px) {
+  @media screen and (max-width: $width) {
+    @content;
+  }
+}
+
+//General Styles
+body {
+  letter-spacing: -0.035em;
+  color: $primary-color;
+}
+body * {
+  margin: 10px 0;
+  font-family: $primary-font;
+  @include mobile(665px) {
+    margin: 0 0 5px 0;
+  }
+}
+.container {
+  padding: 20px 5% 0 5%;
+}
+header {
+  font-family: $secondary-font;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0 10%;
+  @include mobile(665px) {
+    grid-template-columns: 1fr;
+  }
+}
+.scarecrow-image {
+  width: 100%;
+  img {
+    width: 100%;
+    max-height: 400px;
+    @media screen and (min-width: 500px) and (max-width: 665px) {
+      height: 320px;
+      width: 95;
+    }
+  }
+}
+.warning {
+  font-size: 18px;
+  @include mobile(1229px) {
+    font-size: 16px;
+  }
+  @include mobile(665px) {
+    font-size: 12px;
+  }
+  h1 {
+    font-size: 3em;
+    line-height: 60px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 1.1em;
+    color: $secondary-color;
+    line-height: 32px;
+    margin-top: 20px;
+    @include mobile(665px) {
+      font-size: 1.3em;
+      margin: 0;
+    }
+  }
+}
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 10%;
+  @include mobile(665px) {
+    display: block;
+  }
+  @media screen and (min-width: 856px) {
+    margin-top: -9%;
+  }
+  button {
+    background-color: $primary-color;
+    grid-column: 2;
+    width: 180px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    &:hover {
+      background-color: $secondary-color;
+      transition: ease-in-out 1s;
+    }
+  }
+}
