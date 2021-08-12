@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header-nav">
+            <header>
+                <h3>This Interior</h3>
+            </header>
+            <nav class="navigation-bar">
+               <ul>
+                   <li><a href="#">Home</a></li>
+                   <li><a href="#">Collection</a></li>
+                   <li><a href="#">About</a></li>
+                   <li><a href="#">Contact</a></li>
+               </ul> 
+            </nav>
+            <div class="hamburger" onclick="dropdownToggle()">
+                <span id="drop-icon" class="material-icons">menu</span>
+            </div>
+        </div>
+        <section class="intro-text">
+            <h2>Modern Interior</h2>
+            <p>A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</p>
+            <button>
+            <span>Read More</span>
+            <span class="material-icons">menu</span>
+            </button>
+        </section>
+        <div class="hero">
+            <div class="hero-image">
+                <img alt="Nice interior setup image" src="./Assets/photo1.png">               
+            </div>
+            <div class="hero-profile">
+                <div class="hero-profile-grid">
+                    <div class="profile-image">
+                        <img src="./Assets/photo2.png" alt="Aliza Weber">
+                    </div>
+                    <div>
+                        <h4 class="profile-name">Aliza Webber</h4>
+                        <p class="profile-position">Interior designer</p>
+                    </div>
+                </div>
+                <h2 class="profile-text">Designed in 2020 by Aliza Webber</h2>
+            </div>
+        </div>
+        <footer>
+            <p>created by TosinJs - <a href="devChallenges.io">devChallenges.io</a></p>
+        </footer>
+    </div>
+</body>
+<script>
+    const dropdownToggle = () => {
+        const nav = document.querySelector("nav")
+        const dropIcon = document.querySelector("#drop-icon")
+        nav.classList.toggle("responsive")
+        console.log(nav.classList)
+        if (nav.classList.contains("responsive")) {
+            dropIcon.innerHTML = "close"
+            console.log(nav.classList.contains("responsive"))
+        } else {
+            dropIcon.innerHTML = "menu"
+        }
+    }
+</script>
+</html>
