@@ -4,7 +4,7 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
-  background-color: black;
+  background-color: #181719;
   color: white;
   font-style: normal;
 }
@@ -151,17 +151,21 @@ header {
 }
 
 .intro-text button {
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  cursor: pointer;
 }
 
 .intro-text button * {
   margin-right: 20px;
+}
+
+.intro-text button:hover .arrow {
+  margin-left: 10px;
 }
 
 @media screen and (min-width: 600px) {
@@ -223,7 +227,14 @@ header {
   right: 5%;
   width: 70%;
   padding: 10px;
-  border: 1px solid red;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 951px) {
+  .hero .hero-profile {
+    width: 400px;
+  }
 }
 
 @media screen and (max-width: 951px) and (min-width: 601px) {
@@ -256,14 +267,14 @@ header {
 }
 
 .hero .hero-profile .profile-name {
-  font-size: 12px;
+  font-size: 16px;
   line-height: 15px;
   font-weight: 500;
   margin-bottom: 10px;
 }
 
 .hero .hero-profile .profile-position {
-  font-size: 10px;
+  font-size: 12px;
   line-height: 12px;
   font-weight: 500;
 }
@@ -282,12 +293,12 @@ header {
   border-radius: 50%;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 599px) {
   .hero .hero-profile .profile-position {
     font-size: 14px;
   }
   .hero .hero-profile .profile-name {
-    font-size: 20px;
+    font-size: 15px;
   }
 }
 
