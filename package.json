@@ -1,0 +1,24 @@
+{
+  "name": "learn_and_grow",
+  "version": "1.0.0",
+  "description": "<!-- Please update value in the {}  -->",
+  "main": "index.js",
+  "dependencies": {
+    "tailwindcss": "^2.2.15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "tailwindcss build -i src/styles.css -o public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TosinJs/Learn_And_Grow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TosinJs/Learn_And_Grow/issues"
+  },
+  "homepage": "https://github.com/TosinJs/Learn_And_Grow#readme"
+}
