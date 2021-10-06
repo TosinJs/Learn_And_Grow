@@ -1,11 +1,19 @@
 module.exports = {
-  purge: [],
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      outline: {
+        blue: "2px solid #2563EB"
+      }
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["active"],
+      borderWidth: ["active"],
+      borderColor: ["active"],
+    },
   },
   plugins: [],
 }
