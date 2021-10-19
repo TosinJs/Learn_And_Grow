@@ -5,7 +5,13 @@ module.exports = {
     extend: {
       outline: {
         blue: "2px solid #2563EB"
-      }
+      },
+      gridTemplateColumns: {
+        "tube": "80px auto-fill"
+      },
+      gridTemplateRows: {
+        "tube": "56px calc(100vw - 400px)"
+      },
     },
   },
   variants: {
