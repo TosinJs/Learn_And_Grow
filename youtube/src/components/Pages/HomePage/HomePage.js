@@ -13,7 +13,7 @@ const HomePage = () => {
     return (
         <>
         <div className="overflow-x-hidden">
-        <div className="fixed w-full top-p">
+        <div className="fixed w-full top-p z-10">
             <NavComponent />
             <div className="ml-20 border-t border-b border-gray-200">
               <HomePills />  
@@ -22,8 +22,7 @@ const HomePage = () => {
                <HomeSidebar /> 
             </div> 
         </div>
-        <div className="mt-28 ml-20 w-11/12 pr-4 pt-2">
-             <HomePoster />   
+        <div className="mt-28 ml-20 w-12/12 pr-4 pt-2 bg-gray-100">
             <QueryClientProvider client={ queryClient }>
                 <HomeVideos /> 
                 <ReactQueryDevtools initialIsOpen={false} />

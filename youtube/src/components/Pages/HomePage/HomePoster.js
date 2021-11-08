@@ -1,6 +1,6 @@
 const HomePoster = () => {
     return (
-        <div className="h-64 w-full bg-black">
+        <div className="h-64 w-full bg-black z-50 text-black">
             <div>
                 <h4>Youtube Music</h4>
             </div>

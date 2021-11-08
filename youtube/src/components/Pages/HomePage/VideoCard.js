@@ -2,24 +2,8 @@ import { useQuery } from "react-query";
 import ClockSVG from "../../../assets/schedule_white_24dp.svg";
 import PlaylistSVG from "../../../assets/playlist_play_white_24dp.svg";
 import { useState } from "react";
+import { fetchChannelData } from "../../../utils";
 
-const key = "AIzaSyDK3l82Fcr3vK68DsyXvg1TrsSBtTH5nnA"
-const fetchChannelData = async ({queryKey}) => {
-    const [, channelId] = queryKey
-    try {
-        const response = await fetch("https://youtube.googleapis.com/youtube/v3/channels?" + new URLSearchParams({
-            key,
-            id: channelId,
-            part: "snippet"
-        }))
-        if (!response) {
-            throw new Error("Something Went Wrong")
-        }
-        return response.json()
-    } catch (error) {
-        console.log(error)
-    }
-}
 const VideoCard = ({ snippet }) => {
     const {title, thumbnails, channelId } = snippet
     const { isLoading, isError, data, error } = useQuery(["channel", channelId], fetchChannelData)
