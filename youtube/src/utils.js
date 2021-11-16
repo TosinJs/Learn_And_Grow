@@ -1,5 +1,3 @@
-const key = "AIzaSyDK3l82Fcr3vK68DsyXvg1TrsSBtTH5nnA"
-
 exports.fetchChannelData = async ({ queryKey }) => {
     const [, channelId] = queryKey
     try {
