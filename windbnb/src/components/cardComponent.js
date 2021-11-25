@@ -1,19 +1,22 @@
 const CardComponent = ({ property }) => {
-    const { country, photo, superHost, beds, type, rating } = property
+    const { country, photo, superHost, beds, type, rating, title } = property
     return (
-        <div>
-            <div>
+        <div className="card">
+            <div className="card-image">
                 <img src={photo} alt={country} />
             </div>
-            <div>
+            <div className="card-content">
                 {
-                superHost ? <p>Super Host</p> : null
+                superHost ? <p className="card-pill">Super Host</p> : null
                 }
-                <p>{type}</p>
-                {
-                beds ? <p>{beds}</p> : null
-                }
+                <p className="card-type">{type}</p>
+                {/* {
+                beds ? <p>.{beds} Beds</p> : null
+                } */}
                 <p>{rating}</p>
+            </div>
+            <div className="card-title">
+                {title}
             </div>
         </div>
     )

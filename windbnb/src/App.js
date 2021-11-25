@@ -9,6 +9,7 @@ function App() {
     locationFIlter: null,
     guestsFilter: 0
   })
+  const [isModal, setIsModal] = useState(false)
   const { locationFilter, guestsFilter } = filter
   let filteredProperties = properties.map(property => {
     if (locationFilter && guestsFilter) {
@@ -26,13 +27,12 @@ function App() {
     } else return property
   })
   filteredProperties = filteredProperties.filter(Boolean)
-  console.log(filteredProperties)
   return (
     <div>
 
       <div className="header">
         <HeaderComponent />
-        <div className="nav-button">
+        <div className="nav-button" onClick={() => setIsModal(true)}>
           <button>
             {
             locationFilter ? <p>{locationFilter}</p> : <p>Add Location</p>
@@ -49,8 +49,8 @@ function App() {
         </div>
       </div>
       
-      <div className="modal">
-        <FilterComponent filter={filter} setFilter={setFilter} />
+      <div className={`${isModal ? "modal" : "hidden"}`}>
+        <FilterComponent filter={filter} setFilter={setFilter} setIsModal={setIsModal}/>
       </div>
 
       <div>

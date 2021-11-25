@@ -5,6 +5,17 @@
         margin-bottom: 1rem;
     }
 }
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+.base-font {
+    font-size: 0.9rem;
+    color: $lighten-color;
+}
+.black-font {
+    color: black;
+}
 .nav-button {
     width: 80%;
     height: 3.5rem;
@@ -27,5 +38,74 @@
     display: none;
 }
 .filter {
+    width: 100%;
     background: white;
+    padding: 1.5rem;
+    display: grid;
+}
+.filter-header {
+    button {
+        font-size: 1.2rem;
+    }
+}
+.filter-button {
+    margin-top: 1rem;
+    width: 100%;
+    box-shadow: rgba(0,0,0,0.05) 0px 0px 0px 2px, rgb(209,213,219) 0px 0px 1px inset;
+    justify-self: center;
+    border-radius: 1rem;
+    button {
+        h3 {
+            font-size: 0.875rem;
+        }
+        p {
+            color: $lighten-color;
+        }
+        padding: 0.4rem;
+        padding-left: 30px;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        display: block;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        width: 100%;
+        text-align: left;
+    }
+    :nth-child(1) {
+        border-top: none;
+    }
+}
+.filter-content {
+    margin-top: 0.65rem;
+    width: 100%;
+    color: rgba(0, 0, 0, 0.897);
+    line-height: 1.5rem;
+    >* {
+        padding: 10px;
+        padding-left: 30px;
+    }
+    button {
+        border: 1px solid #BDBDBD;
+        height: 1.5rem;
+        width: 1.5rem;
+        font-size: 1.2rem;
+        border-radius: 5px;
+    }
+    .more-content {
+        margin-top: 15px;
+        width: 10rem;
+    }
+    h4 {
+        font-size: 14px;
+    }
+}
+
+.submit-btn {
+    background-color: $secondary;
+    display: grid;
+    justify-self: center;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    width: 6rem;
+    height: 3rem;
 }
