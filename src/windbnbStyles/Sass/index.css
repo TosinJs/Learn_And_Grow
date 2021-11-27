@@ -95,6 +95,10 @@ button {
   color: Gray;
 }
 
+.card .card-rating {
+  gap: 4px;
+}
+
 .header {
   display: -ms-grid;
   display: grid;
@@ -187,6 +191,12 @@ button {
   display: -ms-grid;
   display: grid;
   font-family: 'Mulish', sans-serif;
+}
+
+@media (min-width: 720px) {
+  .filter {
+    padding: 2rem 8rem;
+  }
 }
 
 .filter-header button {
@@ -304,5 +314,16 @@ button {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.no-items {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  line-height: 2rem;
 }
 /*# sourceMappingURL=index.css.map */

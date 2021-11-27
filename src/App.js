@@ -26,7 +26,9 @@ function App() {
       } else return null
     } else return property
   })
+  console.log(filteredProperties)
   filteredProperties = filteredProperties.filter(Boolean)
+  console.log(filteredProperties)
   return (
     <div>
 
@@ -58,15 +60,23 @@ function App() {
         <p>12+ Stays</p>
       </div>
 
-      <div className="card-holder">
       {
+      !filteredProperties.length ? 
+            <div className="no-items">
+            <p>Sorry we currently do not have a room that fits your search criteria</p>
+            <p>Please click <button onClick={() => setIsModal(true)}>here</button> to view our other available offers</p>
+            </div>
+            :
+      <div className="card-holder">
+        {
         filteredProperties.map(property => {
           return (
             <CardComponent property={property} />
           )
         })
-      }
+        }
       </div>
+      }
     </div>
   );
 }

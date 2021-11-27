@@ -57,7 +57,10 @@
     background: white;
     padding: 1.5rem;
     display: grid;
-    font-family: 'Mulish', sans-serif;;
+    font-family: 'Mulish', sans-serif;
+    @include md {
+        padding: 2rem 8rem;
+    }
 }
 .filter-header {
     button {
@@ -144,4 +147,11 @@
     @include lg {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+.no-items {
+    text-align: center;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    line-height: 2rem;
 }
