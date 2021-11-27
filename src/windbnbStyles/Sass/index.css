@@ -14,8 +14,15 @@
 }
 
 body {
-  font-family: Poppins;
+  font-family: 'Montserrat', sans-serif;
   padding: 1.0rem;
+  margin: 20px 10px;
+}
+
+@media (min-width: 960px) {
+  body {
+    margin: 20px 40px;
+  }
 }
 
 img {
@@ -41,7 +48,7 @@ button {
 }
 
 .card .card-image {
-  height: 20rem;
+  height: 18rem;
   width: 100%;
   border-radius: 25px;
   overflow: hidden;
@@ -80,7 +87,7 @@ button {
 
 .card .card-title {
   margin-bottom: 15px;
-  font-size: 1.1rem;
+  font-size: 1.0rem;
   font-weight: 600;
 }
 
@@ -92,6 +99,16 @@ button {
   display: -ms-grid;
   display: grid;
   margin-bottom: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 600px) {
+  .header {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .header div {
@@ -105,6 +122,10 @@ button {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.margin {
+  margin-bottom: 2rem;
 }
 
 .base-font {
@@ -128,7 +149,22 @@ button {
   border-radius: 1rem;
 }
 
+@media (min-width: 600px) {
+  .nav-button {
+    width: 80%;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+}
+
+@media (min-width: 960px) {
+  .nav-button {
+    width: 50%;
+  }
+}
+
 .nav-button button {
+  font-family: 'Mulish', sans-serif;
   cursor: pointer;
   font-size: 0.875rem;
   display: inline-block;
@@ -150,6 +186,7 @@ button {
   padding: 1.5rem;
   display: -ms-grid;
   display: grid;
+  font-family: 'Mulish', sans-serif;
 }
 
 .filter-header button {
@@ -201,6 +238,15 @@ button {
   padding-left: 30px;
 }
 
+.filter-content li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 .filter-content button {
   border: 1px solid #BDBDBD;
   height: 1.5rem;
@@ -229,5 +275,34 @@ button {
   font-size: 1rem;
   width: 6rem;
   height: 3rem;
+}
+
+.card-holder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 600px) {
+  .card-holder {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 720px) {
+  .card-holder {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 960px) {
+  .card-holder {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 /*# sourceMappingURL=index.css.map */

@@ -15,8 +15,12 @@
 }
 
 body {
-  font-family: Poppins;
+  font-family: 'Montserrat', sans-serif;
   padding: 1.0rem;
+  margin: 20px 10px;
+  @include lg {
+    margin: 20px 40px;
+  }
 }
 
 img {

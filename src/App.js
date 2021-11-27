@@ -6,7 +6,7 @@ import properties from "./stays.json";
 
 function App() {
   const [filter, setFilter] = useState({
-    locationFIlter: null,
+    locationFIlter: "",
     guestsFilter: 0
   })
   const [isModal, setIsModal] = useState(false)
@@ -35,12 +35,12 @@ function App() {
         <div className="nav-button" onClick={() => setIsModal(true)}>
           <button>
             {
-            locationFilter ? <p>{locationFilter}</p> : <p>Add Location</p>
+            locationFilter ? <p>{`${locationFilter}, Finland`}</p> : <p>Add Location</p>
             }
           </button>
           <button>
             {
-            guestsFilter ? <p>{guestsFilter}</p> : <p>Add Guests</p>
+            guestsFilter ? <p>{`${guestsFilter} guest${guestsFilter > 1 ? "s" : ""}`}</p> : <p>Add Guests</p>
             }
           </button>
           <button>
@@ -53,7 +53,12 @@ function App() {
         <FilterComponent filter={filter} setFilter={setFilter} setIsModal={setIsModal}/>
       </div>
 
-      <div>
+      <div className="flex margin">
+        <h4>Stays in Finland</h4>
+        <p>12+ Stays</p>
+      </div>
+
+      <div className="card-holder">
       {
         filteredProperties.map(property => {
           return (
