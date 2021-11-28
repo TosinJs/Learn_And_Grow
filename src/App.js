@@ -26,9 +26,7 @@ function App() {
       } else return null
     } else return property
   })
-  console.log(filteredProperties)
   filteredProperties = filteredProperties.filter(Boolean)
-  console.log(filteredProperties)
   return (
     <div>
 
@@ -51,7 +49,7 @@ function App() {
         </div>
       </div>
       
-      <div className={`${isModal ? "modal" : "hidden"}`}>
+      <div className={`${isModal ? "modal" : "modal hidden-modal"}`}>
         <FilterComponent filter={filter} setFilter={setFilter} setIsModal={setIsModal}/>
       </div>
 
@@ -69,9 +67,9 @@ function App() {
             :
       <div className="card-holder">
         {
-        filteredProperties.map(property => {
+        filteredProperties.map((property,index) => {
           return (
-            <CardComponent property={property} />
+            <CardComponent key={index} property={property} />
           )
         })
         }

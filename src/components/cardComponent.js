@@ -1,5 +1,5 @@
 const CardComponent = ({ property }) => {
-    const { country, photo, superHost, beds, type, rating, title } = property
+    const { country, photo, superHost, type, rating, title } = property
     return (
         <div className="card">
             <div className="card-image">

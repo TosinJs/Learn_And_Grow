@@ -17,6 +17,8 @@ body {
   font-family: 'Montserrat', sans-serif;
   padding: 1.0rem;
   margin: 20px 10px;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
 @media (min-width: 960px) {
@@ -40,6 +42,13 @@ button {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+}
+
+.hidden-modal {
+  background: none;
+  top: -750px;
 }
 
 .card {
@@ -87,8 +96,14 @@ button {
 
 .card .card-title {
   margin-bottom: 15px;
-  font-size: 1.0rem;
+  font-size: 0.9rem;
   font-weight: 600;
+}
+
+@media (min-width: 720px) {
+  .card .card-title {
+    font-size: 0.9rem;
+  }
 }
 
 .card .card-type {
@@ -255,6 +270,10 @@ button {
   cursor: pointer;
   -ms-flex-line-pack: center;
       align-content: center;
+}
+
+.filter-content li:hover {
+  background-color: #eee7e7;
 }
 
 .filter-content button {

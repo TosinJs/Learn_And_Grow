@@ -106,6 +106,9 @@
         display: flex;
         cursor: pointer;
         align-content: center;
+        &:hover {
+            background-color: #eee7e7;
+        }
     }
     button {
         border: 1px solid #BDBDBD;

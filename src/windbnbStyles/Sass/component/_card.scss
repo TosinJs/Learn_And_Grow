@@ -29,8 +29,11 @@
     }
     .card-title {
         margin-bottom: 15px;
-        font-size: 1.0rem;
+        font-size: 0.9rem;
         font-weight: 600;
+        @include md {
+            font-size: 0.9rem;
+        }
     }
     .card-type {
         color: Gray;
