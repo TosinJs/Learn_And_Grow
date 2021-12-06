@@ -1,0 +1,49 @@
+.home {
+    * {
+        margin: 2px 0;
+    }
+    h2 {
+        color: white;
+    }
+    div {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        margin-top: 20px;
+        gap: 10px;
+        width: 100%;
+    }
+    span {
+        position: relative;
+    }
+    button {
+        padding: 16px 22px;
+        font-size: 1.25rem;
+        width: 15rem;
+        border-radius: 10px;
+        transition: all 1s ease;
+        position: relative;
+        &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        border-radius: 10px;
+        background: rgba($primary,.4);
+        width: 56px;
+        height: 56px;
+        transition: all .3s ease;
+        }
+        &:hover {
+            &:before {
+          width: 100%;
+          background: rgba($primary,0.3);
+            }
+            &:active {
+            transform: scale(.96)
+            }
+        }
+
+    }
+}
