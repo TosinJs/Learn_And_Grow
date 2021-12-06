@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-btn {
+    @apply w-10 h-10 p-2 border-gray-400 rounded-full flex items-center active:bg-gray-50 active:border-gray-700 active:border;
+}
+.nav-section {
+    @apply flex items-center;
+}
+.pill {
+    @apply border border-gray-300 bg-gray-100 px-3 py-1 rounded-full hover:bg-gray-200 font-medium;
+}
+.pill-active {
+    @apply bg-black text-white;
+}
+.sidebar-button {
+    @apply w-full py-4 grid justify-items-center hover:bg-gray-100;
+}
+.hidden-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.hidden-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
