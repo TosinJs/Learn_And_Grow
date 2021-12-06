@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/icons8-cart-24.png">
+    <link rel="stylesheet" href="styles.css">
+    <title>Checkout</title>
+</head>
+<body class="border-box w-full">
+    <div class="m-4 md:grid md:grid-cols-4 md:gap-4 md:px-12">
+        <!--Header-->
+        <header class="mt-4 col-span-4">
+            <h2 class="text-xl font-semibold">Checkout</h2>
+        </header>
+        <!--Cart-->
+        <section class="bg-gray-100 p-6 mt-2 rounded-lg md:order-2 md:col-span-2 h-4/6 md:mt-8">
+            <div>
+                <!--Cart Item-->
+                <div class="flex gap-6">
+                    <div class="w-32 h-32 rounded-md overflow-hidden">
+                        <img src="assets/photo1.png" alt="school bag">
+                    </div>
+                    <div class="relative">
+                        <h3 class="text-sm font-semibold">Vintage Backbag</h3>
+                        <p class="mt-2"> 
+                            <span class="font-semibold text-yellow-500">$54.99</span>
+                            <span class="font-semibold line-through">$94.99</span>
+                        </p>
+                        <div class="absolute bottom-0 border-gray-400 border-2 p-1 rounded-md">
+                            <button class="mx-1 bg-gray-200 w-6 font-bold rounded-md text-gray-600">-</button>
+                            <span class="mx-1 text-md font-semibold">1</span>
+                            <button class="mx-1 bg-gray-200 w-6 font-bold rounded-md text-gray-600">+</button>
+                        </div>
+                    </div>
+                </div>
+                <!--Cart Item-->
+                <div class="flex gap-6 mt-8">
+                    <div class="w-32 h-32 rounded-md overflow-hidden">
+                        <img src="assets/photo2.png" alt="Levi Shoes">
+                    </div>
+                    <div class="relative">
+                        <h3 class="text-sm font-semibold">Levi Shoes</h3>
+                        <p class="mt-2"> 
+                            <span class="font-semibold text-yellow-500">$74.99</span>
+                            <span class="font-semibold line-through">$124.99</span>
+                        </p>
+                        <div class="absolute bottom-0 border-gray-400 border-2 p-2 rounded-md">
+                            <button class="mx-1 bg-gray-200 w-6 font-bold rounded-md text-gray-600">-</button>
+                            <span class="mx-1 text-md font-semibold">1</span>
+                            <button class="mx-1 bg-gray-200 w-6 font-bold rounded-md text-gray-600">+</button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            <!--Payment Details-->
+            <div class="mt-12 divide-y-2 divide-solid divide-black border-black border-t-2">
+                <p class="flex justify-between mt-2">
+                    <span>Shipping</span>
+                    <span>$19</span>
+                </p>
+                <p class="flex justify-between mt-2 pt-2">
+                    <span>Total</span>
+                    <span>$148.98</span>
+                </p>
+            </div>
+        </section>
+        <!--Contact Form-->
+        <form class="mt-6 md:mt-4 md:col-span-2">
+            <div>
+                <h3 class="font-semibold">Contact Information</h3>
+                <div>
+                    <div>
+                        <label for="email" class="labels">E-Mail</label>
+                        <input placeholder="Enter Your Email..." class="input" name="email">
+                    </div>
+                    <div>
+                        <label for="Phone" class="labels">Phone</label>
+                        <input placeholder="Enter Your Phone Number..." name="phone" class="input">
+                    </div>
+                </div>
+            </div>
+        <!--Shipping Form-->
+            <div>
+                <h3 class="font-semibold mt-10">Shipping Address</h3>
+                <div>
+                    <div>
+                        <label for="name" class="labels">Full Name</label>
+                        <input placeholder="Enter Your Full Name" name="name" value="Rodney Cotton" class="input">
+                    </div>
+                    <div>
+                        <label for="address" class="labels">Phone</label>
+                        <input placeholder="Your Address..." name="address" class="input">
+                    </div>
+                    <div>
+                        <label for="city" class="labels">Phone</label>
+                        <input placeholder="Your City..." name="city" class="input">
+                    </div>
+                    <div>
+                        <label for="country" class="labels">Country</label>
+                        <input placeholder="Your Country..." name="country" class="input">
+                    </div>
+                    <div>
+                        <label for="postal" class="labels">Postal Code</label>
+                        <input placeholder="Your Postal Code..." name="postal" class="input">
+                    </div>
+                    <div class="flex content-center gap-2 h-10 mt-2 items-center">
+                        <label for="checkbox" class="order-2">Save This Information for Later</label>
+                        <input type="checkbox" name="checkbox" >
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-end">
+                <button style="background-color: #F2994A;" class="p-2 font-semibold text-lg text-white rounded-md">Continue</button>
+            </div>
+        </form>
+        <!--Footer-->
+        <footer class="mt-4 md:col-span-4 md:order-3">
+            <p class="text-center text-gray-500"><a target="_blank" href="https://icons8.com/icon/IBe9RSaTC9qy/cart">Cart</a> icon by <a target="_blank" href="https://icons8.com" class="text-blue-500">Icons8</a></p>
+            <p class="text-center text-gray-500">created by username - devChallenges.io</p>
+        </footer>
+    </div>
+</body>
+</html>
