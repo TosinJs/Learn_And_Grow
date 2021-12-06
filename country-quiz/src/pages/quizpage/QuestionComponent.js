@@ -27,9 +27,8 @@ const QuestionComponent = ({ questionCountry, capitals, score, setScore }) => {
         }
     }
     return (
-        <div>
+        <div className="central question">
             <h2>The Capital of {name.common} is ?</h2>
-            <h3>{score}</h3>
             <div>
                 {
                 capitalOptions.map((questionCapital, index) => {
