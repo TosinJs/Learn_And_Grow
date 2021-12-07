@@ -1,18 +1,24 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import SwiperCore, { Navigation, Pagination, Scrollbar, EffectCoverflow } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react/swiper-react.js';
 import { fetchCountries, getRandom } from "../../utils";
 import QuestionComponent from "./QuestionComponent";
+import LoaderComponent from "./LoaderComponent";
+
+import 'swiper/swiper.scss'; // core Swiper
+import 'swiper/modules/navigation/navigation.scss'; // Navigation module
+import 'swiper/modules/pagination/pagination.scss';
+import 'swiper/modules/scrollbar/scrollbar.scss';
+import 'swiper/modules/effect-coverflow/effect-coverflow.scss';
+
+SwiperCore.use([EffectCoverflow,Pagination,Navigation]);
 
 const QuizComponent = ({score, setScore}) => {
     const [countries, setCountries] = useState([]);
+    const [loading, setLoading] = useState(true);
     const [questionCountries, setQuestionCountries] = useState([]);
     const [capitals, setCapitals] = useState([]);
-    const [screenProperties, setScreenProperties] = useState({
-        scrollLeft: 0,
-        scrollWidth: 0,
-        outerWidth: 200,
-    })
-    const pillRef = useRef()
     useEffect(() => {
         const getCountries = async () => {
             const countries = await fetchCountries();
@@ -21,61 +27,42 @@ const QuizComponent = ({score, setScore}) => {
             setCapitals(capitals);
             setCountries(countries);
             setQuestionCountries(questionCountries);
+            setLoading(false)
         }
         getCountries()
     }, [])
-    const handleClick = (direction) => {
-        if (pillRef) {
-            direction === "left" ? pillRef.current.scrollLeft -= 200 
-            : 
-            pillRef.current.scrollLeft += 200   
-        } else return
-        console.log(pillRef.current.scrollLeft)
-        console.log(pillRef.current.scrollWidth)
-        console.log(pillRef.current.clientWidth)
-        console.log(pillRef.current.scrollWidth === pillRef.current.scrollLeft + pillRef.current.clientWidth)
-        setScreenProperties({
-            scrollLeft: pillRef.current.scrollLeft,
-            scrollWidth: pillRef.current.scrollWidth,
-            outerWidth: pillRef.current.clientWidth,
-        })
+    if (loading) {
+        return <LoaderComponent />
     }
-    const {scrollLeft, scrollWidth, outerWidth} = screenProperties;
     return (
-        <div>
-            <div className="quiz">
-            {
-            scrollLeft === 0 ? null
-            : 
-            <div>
-            <button onClick={() => handleClick("left")}>
-                +
-            </button>
-            </div>
-            }   
+        <div className="quiz-holder">
+            <div className="quiz">  
+            <Swiper effect={'coverflow'} centeredSlides={false} slidesPerView={'auto'} coverflowEffect={{
+            "rotate": 50,
+            "stretch": 0,
+            "depth": 100,
+            "modifier": 1,
+            "slideShadows": false
+            }} pagination={true} navigation={true} className="mySwiper">
             {
             questionCountries.map((questionCountry, index) => {
                 return (
-                <div key={index}>
-                    <QuestionComponent questionCountry={questionCountry} capitals={capitals}  score={score} setScore={setScore} />
-                </div>
+                    <SwiperSlide>
+                        <div key={index}>
+                            <QuestionComponent questionCountry={questionCountry} capitals={capitals}  score={score} setScore={setScore} />
+                        </div>
+                    </SwiperSlide>
                 )
             })
             }
-            {
-            (scrollWidth) === (scrollLeft + outerWidth) ? null
-            :
-            <div>
-                <button onClick={() => handleClick("right")}>
-                    -
+            </Swiper>
+            </div>
+            <div className="submit-holder">
+                <button className="submit">
+                    <Link to="/result">
+                        Submit
+                    </Link>
                 </button>
-            </div>
-            }
-            </div>
-            <div>
-                <Link to="/result">
-                    <button>Submit</button>
-                </Link>
             </div>
         </div>
     )

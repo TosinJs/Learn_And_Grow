@@ -2,3 +2,51 @@
     display: flex;
     gap: 1rem;
 }
+.central {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    height: 400px;
+    padding: 20px;
+  }
+.quiz-holder {
+    background: rgba( 255, 255, 255, 0.5 );
+    padding: 25px 0 5px 0;
+    width: 100%;
+}
+.mySwiper {
+    width: 45vw;
+    min-width: 400px;
+}
+.btn-green {
+    background: $correct;
+}
+.btn-red {
+    background: $wrong;
+}
+.submit-holder {
+    display: flex;
+    align-content: flex-end;
+    justify-content: flex-end;
+    padding: 5px;
+    height: 45px;
+    margin-top: 10px;
+}
+.submit {
+    padding: 10px;
+    font-size: 16px;
+    height: 40px;
+    font-weight: bold;
+    background: rgb(34, 196, 120);
+    border-radius: 8px;
+}
+.result {
+    width: 40vw;
+    min-width: 400px;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}

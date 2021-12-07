@@ -4,8 +4,10 @@
 //Base and Layout
 @import "breakpoints";
 @import "base";
+@import "generalMixin";
 
 //Components
+@import "./components/loadercomponent";
 @import "./components/homecomponent";
 @import "./components/questioncomponent";
 
