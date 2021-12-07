@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.container {
+  font-family: "Poppins", sans-serif;
+  width: 80%;
+  padding: 8% 10%;
+}
+
+@media screen and (min-width: 601px) {
+  .container {
+    padding: 4% 10%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 70%;
+    padding: 2% 15%;
+  }
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 720px) {
+  header {
+    width: 100%;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    justify-items: start;
+  }
+}
+
+header .header-story {
+  margin: 0px 0 35px 00px;
+}
+
+header h3 {
+  font-family: "PT Serif", serif;
+  font-size: 34px;
+  line-height: 50px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+header h4 {
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.card-holder {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 60px 25px;
+}
+
+@media screen and (min-width: 601px) {
+  .card-holder {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.card-holder .card:nth-child(even) {
+  top: 50px;
+}
+
+@media screen and (min-width: 601px) {
+  .card-holder .card:nth-child(5) {
+    top: 100px;
+    background-color: blue;
+  }
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  width: 90%;
+  height: 180px;
+}
+
+@media screen and (min-width: 601px) {
+  .card img {
+    height: 220px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .card img {
+    height: 250px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .card img {
+    height: 270px;
+  }
+}
+
+.card .card-name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 21px;
+}
+
+.card .card-title {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 13.25px;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 10%;
+  top: 0;
+  right: 0;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+}
+/*# sourceMappingURL=styles.css.map */

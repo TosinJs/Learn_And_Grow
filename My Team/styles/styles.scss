@@ -1,0 +1,120 @@
+//Resetting Everything
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+//Declaring the primary variables
+$primary-font: "Poppins", sans-serif;
+$secondry-font: "PT Serif", serif;
+
+//Mixins
+@mixin responsive-design($width) {
+  @if $width < 601px {
+    @media screen and (max-width: $width) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+  }
+}
+
+//General Styles
+.container {
+  font-family: $primary-font;
+  width: 80%;
+  padding: 8% 10%;
+  @include responsive-design(601px) {
+    padding: 4% 10%;
+  }
+  @include responsive-design(1200px) {
+    width: 70%;
+    padding: 2% 15%;
+  }
+}
+
+header {
+  display: grid;
+  margin-bottom: 20px;
+  @include responsive-design(720px) {
+    width: 100%;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    justify-items: start;
+  }
+  .header-story {
+    margin: 0px 0 35px 00px;
+  }
+  h3 {
+    font-family: $secondry-font;
+    font-size: 34px;
+    line-height: 50px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  h4 {
+    font-size: 20px;
+    line-height: 27px;
+    margin-bottom: 5px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 21px;
+  }
+}
+
+.card-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px 25px;
+  @include responsive-design(601px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.card-holder .card:nth-child(even) {
+  top: 50px;
+}
+@include responsive-design(601px) {
+  .card-holder .card:nth-child(5) {
+    top: 100px;
+    background-color: blue;
+  }
+}
+.card {
+  position: relative;
+  img {
+    width: 90%;
+    height: 180px;
+    @include responsive-design(601px) {
+      height: 220px;
+    }
+    @include responsive-design(900px) {
+      height: 250px;
+    }
+    @include responsive-design(1200px) {
+      height: 270px;
+    }
+  }
+  .card-name {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+  }
+  .card-title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 13.25px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 10%;
+    top: 0;
+    right: 0;
+    writing-mode: vertical-lr;
+  }
+}
