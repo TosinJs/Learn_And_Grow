@@ -1,0 +1,13 @@
+//Variables and Functions
+@import "variables";
+
+//Base and Layout
+@import "breakpoints";
+@import "base";
+
+//Components
+@import "component/modal";
+@import "component/card";
+
+//General Styles
+@import "generalStyles";
