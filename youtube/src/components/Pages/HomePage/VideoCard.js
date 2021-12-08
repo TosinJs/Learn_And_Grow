@@ -2,7 +2,7 @@ import { useQuery } from "react-query";
 import ClockSVG from "../../../assets/schedule_white_24dp.svg";
 import PlaylistSVG from "../../../assets/playlist_play_white_24dp.svg";
 import { useState } from "react";
-import { fetchChannelData } from "../../../utils";
+import { fetchChannelData } from "../../../utils.js";
 
 const VideoCard = ({ snippet }) => {
     const {title, thumbnails, channelId } = snippet
