@@ -16,15 +16,14 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
-
 #root {
-  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-  height: 100vh;
+  background-image: linear-gradient(to left bottom, #040523, #090f2f, #0d163b, #131b48, #1a2055, #282c66, #363878, #44458a, #5c5da6, #7476c3, #8c8fe1, #a5aaff);height: 100vh;
   display: grid;
   justify-items: center;
   align-items: center;
+  overflow: hidden;
 }
-button {
+button { 
   display: block;
   cursor: pointer;
   padding: 2px;

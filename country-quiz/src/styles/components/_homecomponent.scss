@@ -1,3 +1,6 @@
 .home {
     @include general($primary);
+    button {
+        width: 15rem;
+    }
 }

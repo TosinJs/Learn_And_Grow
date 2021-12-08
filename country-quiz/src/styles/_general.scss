@@ -15,11 +15,32 @@
   }
 .quiz-holder {
     background: rgba( 255, 255, 255, 0.5 );
+    border-radius: 5px;
     padding: 25px 0 5px 0;
     width: 100%;
+    position: relative;
+}
+.quiz-swiper {
+  display: grid;
+  justify-items: center;
+  width: 100%;
+}
+.quiz-svg {
+  position: absolute;
+  bottom: -20px;
+  right: 250px;
+  z-index: 4;
+  @include md {
+    right: -100px;
+    top: -50px;
+  }
+}
+.swiper-button-next, .swiper-button-prev {
+  color: $initial !important;
+  font-weight: bolder;
 }
 .mySwiper {
-    width: 45vw;
+    width: 35vw;
     min-width: 400px;
 }
 .submit-holder {
@@ -35,14 +56,18 @@
     font-size: 16px;
     height: 40px;
     font-weight: bold;
-    background: rgb(34, 196, 120);
+    background: $initial;
     border-radius: 8px;
 }
 .dead {
     background: rgba(192, 185, 185, 0.6);
 }
 .live {
-    background: rgba(89, 209, 153, 0.8);
+    background: $initial;
+}
+.error-center {
+  color: white;
+  text-align: center;
 }
 .shake-vertical {
 	-webkit-animation: shake-vertical 1.2s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;

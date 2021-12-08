@@ -17,8 +17,8 @@ body {
 }
 
 #root {
-  background: -webkit-gradient(linear, left bottom, right top, from(#051937), color-stop(#004d7a), color-stop(#008793), color-stop(#00bf72), to(#a8eb12));
-  background: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  background-image: -webkit-gradient(linear, right top, left bottom, from(#040523), color-stop(#090f2f), color-stop(#0d163b), color-stop(#131b48), color-stop(#1a2055), color-stop(#282c66), color-stop(#363878), color-stop(#44458a), color-stop(#5c5da6), color-stop(#7476c3), color-stop(#8c8fe1), to(#a5aaff));
+  background-image: linear-gradient(to left bottom, #040523, #090f2f, #0d163b, #131b48, #1a2055, #282c66, #363878, #44458a, #5c5da6, #7476c3, #8c8fe1, #a5aaff);
   height: 100vh;
   display: -ms-grid;
   display: grid;
@@ -26,6 +26,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 button {
@@ -214,9 +215,12 @@ button {
           transform: scale(0.96);
 }
 
+.home button {
+  width: 15rem;
+}
+
 .question {
   width: 80%;
-  margin-left: 40px;
   text-align: center;
 }
 
@@ -284,8 +288,8 @@ button {
 }
 
 .question img {
-  width: 160px;
-  height: 120px;
+  width: 120px;
+  height: 80px;
 }
 
 .question .img-div {
@@ -296,6 +300,7 @@ button {
   height: 56px;
   font-size: 1.2rem;
   white-space: nowrap;
+  width: 15rem;
 }
 
 .flex {
@@ -320,12 +325,40 @@ button {
 
 .quiz-holder {
   background: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
   padding: 25px 0 5px 0;
+  width: 100%;
+  position: relative;
+}
+
+.quiz-swiper {
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
   width: 100%;
 }
 
+.quiz-svg {
+  position: absolute;
+  bottom: -20px;
+  right: 250px;
+  z-index: 4;
+}
+
+@media (min-width: 720px) {
+  .quiz-svg {
+    right: -100px;
+    top: -50px;
+  }
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #f8b857 !important;
+  font-weight: bolder;
+}
+
 .mySwiper {
-  width: 45vw;
+  width: 35vw;
   min-width: 400px;
 }
 
@@ -348,7 +381,7 @@ button {
   font-size: 16px;
   height: 40px;
   font-weight: bold;
-  background: #22c478;
+  background: #f8b857;
   border-radius: 8px;
 }
 
@@ -357,7 +390,12 @@ button {
 }
 
 .live {
-  background: rgba(89, 209, 153, 0.8);
+  background: #f8b857;
+}
+
+.error-center {
+  color: white;
+  text-align: center;
 }
 
 .shake-vertical {
