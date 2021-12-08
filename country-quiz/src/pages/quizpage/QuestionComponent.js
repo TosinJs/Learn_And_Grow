@@ -2,25 +2,32 @@ import { useEffect, useState } from "react";
 import { genRandomIndex, getRandom } from "../../utils";
 import ButtonComponent from "./ButtonComponent";
 
-const QuestionComponent = ({ questionCountry, capitals, score, setScore }) => {
-    const { name, capital } = questionCountry;
-    const [capitalOptions, setCapitalOptions] = useState([]);
+const QuestionComponent = ({ questionCountry, options, score, setScore, quizType }) => {
+    const { name, capital, flags } = questionCountry;
+    const { png: flag } = flags
+    const [questionOptions, setQuestionOptions] = useState([]);
     const [disabled, setDisabled] = useState(false);
 
     useEffect(() => {
-        let questionCapitals = getRandom(capitals, 4);
-        const randomIndex = genRandomIndex(questionCapitals);
-        questionCapitals.indexOf(capital) === -1 ? questionCapitals.splice(randomIndex, 1, capital) : console.log("");
-        setCapitalOptions(questionCapitals)
-    }, [])
+        let questionOptions = getRandom(options, 4);
+        const randomIndex = genRandomIndex(questionOptions);
+        questionOptions.indexOf(name) === -1 ? questionOptions.splice(randomIndex, 1, name.common) : console.log("");
+        setQuestionOptions(questionOptions)
+    }, [name, options])
     return (
-        <div className="central question home">
-            <h2>The Capital of {name.common} is ?</h2>
+        <div className="central question">
+            {
+            quizType === "capitals" ? <h2>{capital} is the capital of ?</h2> : <div><div className="img-div"><img src={flag} alt="h" /></div><h2>is the flag of ?</h2></div>
+            }
             <div>
                 {
-                capitalOptions.map((questionCapital, index) => {
+                questionOptions.map((questionOption, index) => {
+                    let color = "white"
+                    if (questionOption === name.common && disabled === true) {
+                        color = "#47bd78"
+                    }
                     return (
-                        <ButtonComponent key={index} questionCapital={questionCapital} setScore={setScore} score={score} capital={capital} disabled={disabled} setDisabled={setDisabled} />
+                        <ButtonComponent key={index} color={color} questionOption={questionOption} setScore={setScore} score={score} name={name} flag={flag} disabled={disabled} setDisabled={setDisabled} />
                     )
                 })
                 }

@@ -22,8 +22,13 @@ export const fetchCountries = async () => {
 
 export const genRandomIndex = (array) => {
     const len = array.length
-    return Math.floor(Math.random() * array.length)
+    return Math.floor(Math.random() * len)
 }
+
+// export const handleRandom = (options, ) => {
+//     const randomIndex = genRandomIndex(options);
+//     capitalOptions.indexOf(capital || flag) === -1 ? capitalOptions.splice(randomIndex, 1, capital || flag) : console.log("");
+// }
 
 // export const checkAnswer = (type, state, fn) => {
 //     switch (type) {

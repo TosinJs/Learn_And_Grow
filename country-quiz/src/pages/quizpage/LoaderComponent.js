@@ -1,15 +1,15 @@
 const LoaderComponent = () => {
     return (
-        <div class='example'>
-            <div class='block'>
-                <div class='item'></div>
-                <div class='item'></div>
-                <div class='item'></div>
-                <div class='item'></div>
-                <div class='item'></div>
-                <div class='item'></div>
-                <div class='item'></div>
-                <div class='item'></div>
+        <div className='example'>
+            <div className='block'>
+                <div className='item'></div>
+                <div className='item'></div>
+                <div className='item'></div>
+                <div className='item'></div>
+                <div className='item'></div>
+                <div className='item'></div>
+                <div className='item'></div>
+                <div className='item'></div>
             </div>
         </div>
     )

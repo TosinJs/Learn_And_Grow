@@ -2,8 +2,21 @@
     @include general($initial);
     width: 80%;
     margin-left: 40px;
+    text-align: center;
     h2 {
         font-size: 1.25rem;
         color: black;
+    }
+    img {
+        width: 160px;
+        height: 120px;
+    }
+    .img-div {
+        margin-top: -20px;
+    }
+    button {
+        height: 56px;
+        font-size: 1.2rem;
+        white-space: nowrap;
     }
 }
